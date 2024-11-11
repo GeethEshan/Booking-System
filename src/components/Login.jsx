@@ -17,8 +17,8 @@ const Login = () => {
         e.preventDefault();
 
         const loginUrl = role === 'admin'
-            ? "http://localhost:3001/auth/admin/login"
-            : "http://localhost:3001/auth/login";
+            ? "https://booking-441416.de.r.appspot.com/auth/admin/login"
+            : "https://booking-441416.de.r.appspot.com/auth/login";
 
         Axios.post(loginUrl, {
             username: username,
