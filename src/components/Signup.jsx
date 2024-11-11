@@ -21,8 +21,8 @@ const Signup = () => {
 
     const url =
       role === "admin"
-        ? "http://localhost:3001/auth/admin/signup"
-        : "http://localhost:3001/auth/signup";
+        ? "https://booking-441416.de.r.appspot.com/auth/admin/signup"
+        : "https://booking-441416.de.r.appspot.com/auth/signup";
 
     Axios.post(url, {
       username: username,
@@ -43,7 +43,7 @@ const Signup = () => {
 
   const handleGoogleLoginSuccess = async (credential) => {
     try {
-      const res = await Axios.post("http://localhost:3001/auth/google-signin", {
+      const res = await Axios.post("https://booking-441416.de.r.appspot.com/auth/google-signin", {
         idToken: credential,
         role: role,
       });
@@ -116,7 +116,7 @@ const Signup = () => {
 
           try {
             const res = await Axios.post(
-              "http://localhost:3001/auth/facebook-signin",
+              "https://booking-441416.de.r.appspot.com/auth/facebook-signin",
               {
                 accessToken: response.authResponse.accessToken,
                 userInfo,
