@@ -15,7 +15,7 @@ const Report = () => {
     useEffect(() => {
         const fetchAttendanceData = async () => {
             try {
-                const response = await fetch("http://localhost:3001/api/bookings");
+                const response = await fetch("https://booking-441416.de.r.appspot.com/api/bookings");
                 if (!response.ok) {
                     throw new Error("Network response was not ok");
                 }
