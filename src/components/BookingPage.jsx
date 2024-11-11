@@ -18,7 +18,7 @@ function BookingPage() {
 
   const fetchTotalSeats = async () => {
     try {
-      const response = await axios.get("http://localhost:3001/api/seatCount");
+      const response = await axios.get("https://booking-441416.de.r.appspot.com/api/seatCount");
       return response.data.TotalSeats;
     } catch (error) {
       console.error("Error fetching total seats:", error);
@@ -34,7 +34,7 @@ function BookingPage() {
 
     try {
       const response = await axios.get(
-        "http://localhost:3001/api/bookingdata",
+        "https://booking-441416.de.r.appspot.com/api/bookingdata",
         {
           params: { username },
         }
@@ -70,12 +70,12 @@ function BookingPage() {
 
     try {
       const response = await axios.get(
-        `http://localhost:3001/auth/users/${username}`
+        `https://booking-441416.de.r.appspot.com/auth/users/${username}`
       );
       const { email, contactNumber } = response.data;
 
       if (sheets[day]?.reserved) {
-        await axios.delete("http://localhost:3001/api/bookingpagedelete", {
+        await axios.delete("https://booking-441416.de.r.appspot.com/api/bookingpagedelete", {
           data: { username, day },
         });
 
@@ -89,7 +89,7 @@ function BookingPage() {
           },
         }));
       } else {
-        await axios.post("http://localhost:3001/api/bookingpage", {
+        await axios.post("https://booking-441416.de.r.appspot.com/api/bookingpage", {
           username,
           email,
           contactNumber,
@@ -109,7 +109,7 @@ function BookingPage() {
         setReservationData({ username, day });
         setShowQRPopup(true);
 
-        await axios.post("http://localhost:3001/auth/sendBookingConfirmation", {
+        await axios.post("https://booking-441416.de.r.appspot.com/auth/sendBookingConfirmation", {
           email,
           username,
           day,
@@ -123,7 +123,7 @@ function BookingPage() {
   const handleSeatChange = async (newSeatCount) => {
     try {
       const response = await axios.post(
-        "http://localhost:3001/api/updateSeats",
+        "https://booking-441416.de.r.appspot.com/api/updateSeats",
         {
           newSeatCount,
         }
