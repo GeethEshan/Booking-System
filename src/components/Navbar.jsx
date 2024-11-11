@@ -11,7 +11,7 @@ const Navbar = ({ username , role }) => {
         e.preventDefault(); 
         try {
             
-            await axios.post('http://localhost:3001/auth/logout', {}, { withCredentials: true });
+            await axios.post('https://booking-441416.de.r.appspot.com/auth/logout', {}, { withCredentials: true });
 
             
             navigate('/');
