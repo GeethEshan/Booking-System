@@ -18,9 +18,9 @@ const History = () => {
       try {
         let url;
         if (role === "admin") {
-          url = `http://localhost:3001/api/bookings`;
+          url = `https://booking-441416.de.r.appspot.com/api/bookings`;
         } else if (username) {
-          url = `http://localhost:3001/api/history/${username}`;
+          url = `https://booking-441416.de.r.appspot.com/api/history/${username}`;
         } else {
           console.error("No username provided");
           return;
@@ -40,7 +40,7 @@ const History = () => {
 
   const handleCancel = async (username, day) => {
     try {
-      await axios.delete(`http://localhost:3001/api/bookingpagedelete`, {
+      await axios.delete(`https://booking-441416.de.r.appspot.com/api/bookingpagedelete`, {
         data: { username, day },
         withCredentials: true,
       });
@@ -58,7 +58,7 @@ const History = () => {
   const updateAttendance = async (username, day, attendance) => {
     try {
       const response = await axios.put(
-        "http://localhost:3001/api/updateAttendance",
+        "https://booking-441416.de.r.appspot.com/api/updateAttendance",
         {
           username,
           day,
