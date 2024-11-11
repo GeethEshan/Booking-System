@@ -1,0 +1,65 @@
+
+
+.report-page .attendance-container {
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    border-radius: 10px; 
+    max-width: 1200px;
+    margin: auto;
+    position: relative;
+    top: 100px; 
+    max-height: 500px;
+    overflow-y: auto;
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+}
+
+.report-page .attendance-title {
+    
+    text-align: center;
+    color: #0056a2; 
+    margin-bottom: 20px;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.report-page .attendance-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.report-page .attendance-table th,
+.report-page .attendance-table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: center;
+}
+
+.report-page .attendance-table th {
+    background-color: #00b4eb; 
+    color: white;
+    font-weight: bold;
+}
+
+.report-page .attendance-table tr:nth-child(even) {
+    background-color: #f2f2f2; 
+}
+
+.report-page .download-button {
+    background-color: #0056a2; 
+    color: white;
+    border: none;
+    border-radius: 12px; 
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    margin-top: 20px; 
+}
+
+.report-page .download-button:hover {
+    background-color: #004494; 
+}

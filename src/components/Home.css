@@ -1,0 +1,49 @@
+.body{
+    overflow: hidden;
+}
+html, body{
+    overflow: hidden;
+}
+
+.home-page {
+    background-image: url('/images/background.jpg'); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+    height: 100vh; 
+    color: rgb(28, 26, 26);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 5px; 
+}
+  
+.content {
+    background-color: rgba(228, 226, 219, 0.5); 
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 80%;
+    max-width: 1200px; 
+}
+  
+.left-content {
+    width: 100%;
+    margin-bottom: 20px;
+}
+  
+.book-now {
+    margin-top: 50px;
+    padding: 10px 50px;
+    
+    background-color: #FFD700;
+    color: #8B0000;
+}
+.text{
+    color: black;
+    font-size: larger;
+    font-weight: bolder;
+    
+}
